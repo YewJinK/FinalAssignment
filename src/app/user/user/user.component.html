@@ -1,0 +1,20 @@
+<section class="text-center p-2">
+  <h2>Important Concepts on Angular</h2>
+</section>
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false"
+                         *ngFor="let detail of details">
+      <mat-expansion-panel-header class="bg-info border border-white">
+        <mat-panel-title class="h5 text-light">
+          {{detail.title}}
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p class="mt-2" style="font-family: var(--bs-font-sans-serif); font-size: medium;">
+        {{detail.desc}}
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
